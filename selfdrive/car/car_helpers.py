@@ -175,7 +175,7 @@ def get_car(logcan, sendcan, has_relay=False):
 
   if candidate is None:
     cloudlog.warning("car doesn't match any fingerprints: %r", fingerprints)
-    candidate = "mock"
+    candidate = "HYUNDAI SANTA FE LIMITED 2019"
 
   CarInterface, CarController, CarState = interfaces[candidate]
   car_params = CarInterface.get_params(candidate, fingerprints, has_relay, car_fw)
